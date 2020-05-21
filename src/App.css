@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.container {
+  border: 2px solid black;
+  width: 80%;
+  margin: 100px;
+  background-color: #fcfcfc;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 5px 5px #0c0c0c;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.users-section {
+  border: 2px solid green;
+  width: 45%;
+  margin: 20px;
+  padding: 20px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.hobby-section {
+  border: 2px solid gold;
+  width: 45%;
+  margin: 20px;
+  padding: 20px;
+  height: 300px;
+  overflow: hidden;
+}
+.table-container {
+  width: 400px;
+}
+
+table {
+  border: 1px solid black;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  width: 300px;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+thead  {
+  position: relative;
+  display: block;
+}
+
+tbody {
+  display: block;
+  max-height: 180px;
+  overflow: auto;
+}
