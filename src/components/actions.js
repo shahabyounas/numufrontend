@@ -4,23 +4,23 @@ const DELETE_HOBBY = 'delete_hobby'
 const EDIT_HOBBY = 'edit_hobby'
 
 // Actions
-const addUserAction = () => ({
+const addUserAction = user => ({
     type: ADD_USER,
-    payload: 1,
+    payload: user,
 });
 
-const addHobby = () => ({
+const addHobby = hobby => ({
     type: ADD_HOBBY,
-    payload: 2,
+    payload: hobby,
 });
 
-const addUserAction = () => ({
+const addUserAction = hobby => ({
     type: DELETE_HOBBY,
-    payload: 3,
+    payload: hobby,
 });
 
-const addHobby = () => ({
+const editHobby = hobby => ({
     type: EDIT_HOBBY,
-    payload: 4,
+    payload: hobby,
 });
 
