@@ -27,10 +27,12 @@ const Hobby = () => {
       <div className="table-container">
         <table>
           <thead>
-            <th> Passion</th>
-            <th> Hobby</th>
-            <th> Year</th>
-            <th> Add</th>
+            <tr>
+              <th> Passion</th>
+              <th> Hobby</th>
+              <th> Year</th>
+              <th> Add</th>
+            </tr>
           </thead>
           <tbody>
             {users.map(user => (

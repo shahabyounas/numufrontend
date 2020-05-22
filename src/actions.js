@@ -4,22 +4,22 @@ const DELETE_HOBBY = 'delete_hobby'
 const EDIT_HOBBY = 'edit_hobby'
 
 // Actions
-const addUserAction = user => ({
+export const addUserAction = user => ({
     type: ADD_USER,
     payload: user,
 });
 
-const addHobby = hobby => ({
+export const addHobby = hobby => ({
     type: ADD_HOBBY,
     payload: hobby,
 });
 
-const addUserAction = hobby => ({
+export const deleteHobby = hobby => ({
     type: DELETE_HOBBY,
     payload: hobby,
 });
 
-const editHobby = hobby => ({
+export const editHobby = hobby => ({
     type: EDIT_HOBBY,
     payload: hobby,
 });

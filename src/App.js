@@ -1,17 +1,27 @@
-import React from "react"
+import React, { Component } from "react"
 import User from "./components/User"
 import Hobby from "./components/Hobby"
+import { connect } from "react-redux"
+import { addUserAction } from "./actions"
+import store from "./store"
 import "./App.css"
 
-const App = () => {
-  return (
-    <>
-      <div className="container">
-        <User />
-        <Hobby />
-      </div>
-    </>
-  )
+export class App extends Component {
+  componentDidMount() {
+    store.dispatch(addUserAction())
+  }
+
+  render() {
+    return (
+      <>
+        <User {...this.props} />
+        <Hobby {...this.props} />
+      </>
+    )
+  }
 }
 
-export default App
+const mapStateToProps = props => {
+  return { ...props }
+}
+export default connect(mapStateToProps, {})(App)

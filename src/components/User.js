@@ -1,4 +1,6 @@
 import React from "react"
+import { connect } from "react-redux"
+import { addUserAction } from "../actions"
 const users = [
   {
     name: "ali"
@@ -13,13 +15,15 @@ const users = [
     name: "ahmed"
   }
 ]
-const User = () => {
+const User = userProps => {
   return (
     <div className="users-section">
       <div className="table-container">
         <table>
           <thead>
-            <th> Enter User Name</th>
+            <tr>
+              <th> Enter User Name</th>
+            </tr>
           </thead>
           <tbody>
             {users.map(user => (
@@ -34,4 +38,14 @@ const User = () => {
   )
 }
 
-export default User
+
+
+function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    addUserAction(payload) {
+      dispatch(addUserAction(payload))
+    }
+  }
+}
+
+export default connect( mapDispatchToProps)(User)
